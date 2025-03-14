@@ -1,0 +1,66 @@
+.plane {
+  &__container {
+    margin: 20vh auto;
+    display: grid;
+    width: 90vw;
+  }
+
+  &__image {
+    height: 90vh;
+
+    img {
+      display: none;
+    }
+  }
+
+  &__details {
+    width: 140px;
+    align-self: center;
+    justify-self: center;
+
+    h6 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 14.5px;
+      color: #666;
+    }
+
+    .vertical_line {
+      height: 1px;
+      width: 50px;
+      background-color: #424242;
+      margin: 20px 0 25px;
+    }
+  }
+
+  &.direct {
+    grid-template-columns: 2fr 8fr;
+    .plane__details {
+      order: 1;
+    }
+    .plane__image {
+      order: 2;
+    }
+  }
+
+  &.reverse {
+    grid-template-columns: 8fr 2fr;
+    .plane__details {
+      order: 2;
+    }
+    .plane__image {
+      order: 1;
+    }
+  }
+  .plane__image {
+    height: 90vh;
+
+    img {
+      display: none;
+    }
+  }
+}
